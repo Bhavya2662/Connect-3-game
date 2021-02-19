@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Button btn = new Button(this);
                 btn.setText("Play again!");
+                ll.setVisibility(View.VISIBLE);
                 btn.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
                 ll.addView(btn);
 
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         //make dialog invisible
                         LinearLayout linearLayout = findViewById(R.id.play_again);
-                        linearLayout.animate().alpha(0).setDuration(100);
+                        linearLayout.setVisibility(View.GONE);
 
                         gameIsActive = true;
                         activePlayer = 0;
